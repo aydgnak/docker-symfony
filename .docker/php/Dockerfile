@@ -1,5 +1,9 @@
 FROM php:7.3-fpm
 
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+
+# Install PDO MySQL Extension
 RUN docker-php-ext-install pdo_mysql
 
 # Install and enable xDebug
