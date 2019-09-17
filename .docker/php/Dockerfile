@@ -6,13 +6,13 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ 
 # Install PDO MySQL Extension
 RUN docker-php-ext-install pdo_mysql
 
+# Install opcache
+RUN docker-php-ext-install opcache
+
 # Install and enable xDebug
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 
 # Install APCu
 RUN pecl install apcu
-RUN echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apcu.ini
-
-# Install opcache
-RUN docker-php-ext-install opcache
+RUN docker-php-ext-enable apcu
