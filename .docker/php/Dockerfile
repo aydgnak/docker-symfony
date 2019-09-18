@@ -13,6 +13,6 @@ RUN docker-php-ext-install opcache
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 
-# Install APCu
+# Install and enable APCu
 RUN pecl install apcu
 RUN docker-php-ext-enable apcu
