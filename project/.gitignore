@@ -1,4 +1,8 @@
 
+###> project/special ###
+/public/node_modules
+###< project/special ###
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
